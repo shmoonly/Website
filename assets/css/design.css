@@ -1,4 +1,3 @@
-/* General Font Awesome Styles */
 .fa, .fab, .fad, .fal, .far, .fas {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
@@ -8,8 +7,6 @@
     text-rendering: auto;
     line-height: 1;
 }
-
-/* Font Size Variants */
 .fa-lg { font-size: 1.33333em; line-height: .75em; vertical-align: -.0667em; }
 .fa-xs { font-size: .75em; }
 .fa-sm { font-size: .875em; }
@@ -24,7 +21,6 @@
 .fa-9x { font-size: 9em; }
 .fa-10x { font-size: 10em; }
 
-/* Fixed Width and List Styles */
 .fa-fw { text-align: center; width: 1.25em; }
 .fa-ul {
     list-style-type: none;
@@ -54,8 +50,6 @@
     float: right;
     margin-left: .3em;
 }
-
-/* Animations */
 .fa-spin {
     animation: fa-spin 2s linear infinite;
 }
@@ -66,8 +60,6 @@
     0% { transform: rotate(0deg); }
     to { transform: rotate(1turn); }
 }
-
-/* Transformations */
 .fa-rotate-90 { transform: rotate(90deg); }
 .fa-rotate-180 { transform: rotate(180deg); }
 .fa-rotate-270 { transform: rotate(270deg); }
@@ -75,7 +67,6 @@
 .fa-flip-vertical { transform: scaleY(-1); }
 .fa-flip-both { transform: scale(-1); }
 
-/* Stack Styles */
 .fa-stack {
     display: inline-block;
     height: 2em;
@@ -93,10 +84,8 @@
 .fa-stack-1x { line-height: inherit; }
 .fa-stack-2x { font-size: 2em; }
 
-/* Inverse Color */
 .fa-inverse { color: #fff; }
 
-/* Screen Reader Only */
 .sr-only {
     border: 0;
     clip: rect(0, 0, 0, 0);
@@ -116,7 +105,6 @@
     width: auto;
 }
 
-/* Font Faces */
 @font-face {
     font-family: "Font Awesome 5 Brands";
     font-weight: 400;
