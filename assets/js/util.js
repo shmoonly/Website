@@ -30,11 +30,6 @@
 
 	};
 
-	/**
-	 * Panel-ify an element.
-	 * @param {object} userConfig User config.
-	 * @return {jQuery} jQuery object.
-	 */
 	$.fn.panel = function(userConfig) {
 
 		// No elements?
