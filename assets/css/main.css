@@ -37,7 +37,6 @@ table {
     border-spacing: 0;
 }
 
-/* Basic */
 @-ms-viewport { width: device-width; }
 
 @media screen and (max-width: 480px) {
@@ -58,7 +57,6 @@ body.is-preload * {
     transition: none !important;
 }
 
-/* Type */
 @media screen and (max-width: 1680px) { html { font-size: 12pt; } }
 @media screen and (max-width: 736px) { html { font-size: 11pt; } }
 @media screen and (max-width: 360px) { html { font-size: 10pt; } }
@@ -149,9 +147,6 @@ hr {
 .align-center { text-align: center; }
 .align-right { text-align: right; }
 
-/* Removed Contacts Section */
-
-/* Form */
 form {
     margin: 0 0 2rem;
 }
