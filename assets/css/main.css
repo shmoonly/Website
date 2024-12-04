@@ -317,17 +317,6 @@ input, select, textarea {
 			display: none;
 		}
 
-	input[type="text"],
-	input[type="password"],
-	input[type="email"],
-	select {
-		height: 2.75rem;
-	}
-
-	textarea {
-		padding: 0.75rem 1rem;
-	}
-
 	input[type="checkbox"],
 	input[type="radio"] {
 		-moz-appearance: none;
