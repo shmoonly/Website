@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio Website</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            height: 100vh;
+            background: center / cover no-repeat fixed;
+            transition: background-image 0.5s ease-in-out;
+            animation: fadeIn 1s forwards;
+            opacity: 0;
+        }
+        @keyframes fadeIn { to { opacity: 1; } }
+
+        .sidebar {
+            width: 120px;
+            background-color: #2c3e50;
+            color: white;
+            height: 100vh;
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            padding: 20px 10px;
+            box-sizing: border-box;
+            left: -120px;
+            animation: slideIn 0.5s forwards;
+        }
+        @keyframes slideIn { to { left: 0; } }
+
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .sidebar a:hover { background-color: #34495e; }
+
+        .content {
+            margin-left: 120px;
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        section {
+            display: none;
+            text-align: center;
+            opacity: 0;
+            animation: fadeInSection 1s forwards;
+        }
+        @keyframes fadeInSection { to { opacity: 1; } }
+
+        section.active { display: block; }
+
+        h2 {
+            font-size: 4em;
+            margin-bottom: 10px;
+            animation: fadeInHeading 1s forwards;
+            opacity: 0;
+        }
+        @keyframes fadeInHeading { to { opacity: 1; } }
+
+        .portfolio-items {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1200px;
+            width: 100%;
+            justify-items: center;
+        }
+        .portfolio-item {
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out;
+            animation: fadeInPortfolio 1s forwards;
+            opacity: 0;
+        }
+        @keyframes fadeInPortfolio { to { opacity: 1; } }
+
+        .portfolio-item img {
+            width: 100%;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out;
+        }
+        .portfolio-item img:hover { transform: scale(1.05); }
+
+        .portfolio-item p { margin-top: 10px; font-size: 16px; font-weight: bold; }
+
+        .bottom-links {
+            margin-top: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="bottom-links">
+            <a href="#home" onclick="showSection('home')">Home</a>
+            <a href="#portfolios" onclick="showSection('portfolios')">Portfolios</a>
+            <a href="#about" onclick="showSection('about')">About Me</a>
+        </div>
+    </div>
+
+    <div class="content">
+        <section id="home" class="active">
+            <h2>Shmooniverse</h2>
+            <p>Hello there! Welcome to a website made by Shmoon.</p>
+        </section>
+        <section id="portfolios">
+            <h2>My Portfolios</h2>
+            <div class="portfolio-items">
+                <div class="portfolio-item">Portfolio 1</div>
+                <div class="portfolio-item">Portfolio 2</div>
+                <div class="portfolio-item">Portfolio 3</div>
+                <div class="portfolio-item">Portfolio 4</div>
+                <div class="portfolio-item">Portfolio 5</div>
+                <div class="portfolio-item">Portfolio 6</div>
+            </div>
+        </section>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hello there! I'm Shmoon, and this is a brief introduction about me.</p>
+        </section>
+    </div>
+
+    <script>
+        const showSection = id => {
+            document.querySelectorAll('section').forEach(section => section.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+        };
+        window.onload = () => document.body.style.backgroundImage = 'url("images/bg.jpg")';
+    </script>
+</body>
+</html>
